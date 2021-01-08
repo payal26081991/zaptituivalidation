@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Grid suite" thread-count="5" parallel="methods">
+
+	<listeners>
+		<listener
+			class-name="com.gracenote.Listeners.TestNgListeners" />
+	</listeners>
+
+	<test verbose="1" name="GapZap">
+		<classes>
+			<!-- Below class contains BeforeSuite annotation -->
+			<class name="com.gracenote.Utilities.StartupAndTearDown"></class>
+
+			<class name="com.gracenote.TestCases.MultilingualCases">
+				<methods>
+			 <!--   <include name="getIndexPageText" /> 
+					<include name="getSignUpText" />   
+				    <include name="getProgramShowCardText" />
+			        <include name="getAccountSettingText" /> 
+					<include name="getSingleProviderText" /> -->
+			        <include name="getSingleStationText" /> 
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

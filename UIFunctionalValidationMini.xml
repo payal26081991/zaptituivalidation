@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test suite" thread-count="5" parallel="methods"> <!-- thread-count="10" parallel="tests" -->
+	<listeners>
+		<listener class-name="com.gracenote.Listeners.TestNgListeners" />
+	</listeners>
+	
+	<test verbose="1" name="GapZap">
+		<classes>
+			<!-- Below class contains BeforeSuite annotation -->
+			<class name="com.gracenote.Utilities.StartupAndTearDown"></class>
+			<class name="com.gracenote.TestCases.UpdatedSprint69">
+				<methods>
+					<include name="singleStationLinking" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,177 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Grid suite" thread-count="3" parallel="methods">
+
+	<listeners>
+		<listener
+			class-name="com.gracenote.Listeners.TestNgListeners" />
+	</listeners>
+
+	<test verbose="1" name="GapZap">
+		<!-- <groups> <run> <include name="sanity" /> </run> </groups> -->
+		<classes>
+
+			<!-- Below class contains BeforeSuite annotation -->
+			<class name="com.gracenote.Utilities.StartupAndTearDown"></class>
+			
+<!-- 			<class name="com.gracenote.TestCases.MultilingualCases"> -->
+<!-- 				<methods> -->
+<!--  					<include name="getSingleProviderText" />  -->
+<!--   					<include name="getIndexPageText" />   -->
+<!--  					<include name="getProgramShowCardText" /> -->
+<!-- 					<include name="getSignUpText" /> -->
+<!--  					<include name="getAccountSettingText" /> -->
+<!--  					<include name="getSingleStationText" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+	
+	
+			<!-- <class name="com.gracenote.TestCases.UpdatedSprint1">
+				<methods>
+					<include name="verifyHeadendNameDeviceType" />
+					<exclude name="checkProvidersforPincodes" />
+					<exclude name="matchProviderList" />
+				</methods>
+			</class> -->
+
+			<!--  <class name="com.gracenote.TestCases.UpdatedSprint2">
+				<methods>
+					<include name="TVGridEpandEachShowcard" />
+					<exclude name="GridChannelsCountValidation" />
+					<exclude name="HeadendGridChannelsLoading" />
+				</methods>
+			</class> -->
+
+			 <!-- <class name="com.gracenote.TestCases.UpdatedSprint3">
+				<methods>
+					<include name="userSignUp" />
+					<exclude name="resetPassword" />
+					<exclude name="jumpToTimeVerificationGridBar" />
+				</methods>
+			</class> -->
+
+			<!-- <class name="com.gracenote.TestCases.UpdatedSprint4">
+				<methods>
+					<include name="UserLogin" />
+					<include name="userLogout" />
+				</methods>
+			</class> -->
+
+			<class name="com.gracenote.TestCases.UpdatedSprint6">
+				<methods>
+					<include name="addMusicHDChannelGirdPreference" />
+<!-- 					<include name="addPPVChannelGirdPreference" /> -->
+<!-- 					<include name="addMusicChannelGirdPreference" /> -->
+<!-- 					<include name="addHDChannelGirdPreference" /> -->
+<!-- 					<include name="addMusicPPVChannelGirdPreference" /> -->
+<!-- 					<include name="addPPVHDChannelGirdPreference" /> -->
+<!-- 					<include name="addMusicPPVHDChannelGirdPreference" /> -->
+				</methods>
+			</class>
+
+			<!-- <class name="com.gracenote.TestCases.UpdatedSprint7">
+				<methods>
+					<include name="callSignLcnRemoval" />
+					<include name="VerfiyJumtoDateOptionCounts" />
+					<include name="VerfiyJumtoTimeOptionCounts" />
+					<include name="validatePrimetime" />
+				</methods>
+			</class>  -->
+			
+			<!-- <class name="com.gracenote.TestCases.UpdatedSprint13">
+				<methods>
+					<include name="verifyCastCrew" />
+					<include name="verifyEpisodeGuideSeasons" />
+				</methods>
+			</class> --> 
+			
+<!-- 			<class name="com.gracenote.TestCases.UpdatedSprint20"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="verifyContactUs" /> -->
+<!-- 					<include name="verifyPoweredBy" /> -->
+<!-- 					<include name="verifyTVListingIsVisible" /> -->
+<!-- 					<include name="verifyTVListingByNumberIsVisible" /> -->
+<!-- 					<include name="verifyPoweredByLink" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+			
+<!-- 			<class name="com.gracenote.TestCases.UpdatedSprint21"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="verifyshowFamilyChannels" /> -->
+<!-- 					<include name="VerfiyshowMoviesChannels" /> -->
+<!-- 					<include name="VerfiyshowNewsChannels" /> -->
+<!-- 					<include name="VerfiyshowSportsChannels" /> -->
+<!-- 					<include name="VerfiyshowTalkChannels" /> -->
+<!-- 					<include name="VerfiyshowStarredChannels" /> -->
+<!-- 					<include name="VerfiyshowAllChannels" /> -->
+<!-- 				</methods> -->
+<!-- 			</class>  -->
+			
+<!-- 			<class name="com.gracenote.TestCases.UpdatedSprint33"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="verifyHeadendNameDeviceTypeStandardAffiliate" /> -->
+<!-- 					<include name="verifyHeadendNameDeviceTypeSingleProvider" /> -->
+<!-- 					<include name="verifyScheduleDisplaySingleStation" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+			
+			<!--<class name="com.gracenote.TestCases.UpdatedSprint43">
+				<methods>
+					<include name="ValidateTrackerScriptCode" />
+					<include name="ValidateAdsFile" />
+				</methods>
+			</class>
+			
+			<class name="com.gracenote.TestCases.Multilingual">
+				<methods>
+					<include name="getTextsFromUI" />		
+					<include name="validateMultilingualTextFromDB" />				
+				</methods>
+			</class> -->
+			
+			<!-- <class name="com.gracenote.Miscellaneous.ChannelNames">
+				<methods>
+					<include name="channelComparer"></include>
+				</methods>
+			</class>
+
+			<class name="com.gracenote.Miscellaneous.GridLoadTimeComparer">
+				<methods>
+					<include name="gapZapGridLoading" />
+				</methods>
+			</class>
+
+			Commenting as this code runs only on-demand. not on DDC
+			<class
+				name="com.gracenote.Miscellaneous.ImagePresenceVerification">
+				<methods>
+					<include name="verifyProgramDropCellImages"></include>
+					<exclude name="verifyUserFavShowImages"></exclude>
+					<exclude name="verifyProgramShowcardImages"></exclude>
+				</methods>
+			</class>
+
+			Commenting as this code runs only on-demand. not on DDC
+			<class name="com.gracenote.Miscellaneous.ZipcodeTimezone">
+				<methods>
+					<include name="timezoneVerifier"></include>
+				</methods>
+			</class>
+
+			Commenting as this code runs only on-demand. not on DDC
+			<class name="com.gracenote.Miscellaneous.ChannelNames">
+				<methods>
+					<include name="Zap2ITChannelGirdNames"></include>
+					<exclude name="gapzapChannelGirdNames"></exclude>
+				</methods>
+			</class>
+
+			<class name="com.gracenote.Miscellaneous.ChannelNames">
+				<methods>
+					<include name="channelComparer"></include>
+				</methods>
+			</class> -->
+
+		</classes>
+	</test>
+</suite>
